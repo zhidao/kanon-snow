@@ -1,0 +1,8 @@
+Package: kanon-snow
+Maintainer: Tomomichi Sugihara <zhidao@ieee.org>
+Architecture: all
+Version: 2.1-1
+Description: A clone of intermission animations of "Kanon"
+ kanon-snow is a clone of intermission animations of a sound-novel game
+ "Kanon" (C)Key/VisualArts, where some impressive messages appear with
+ a background of falling snow.

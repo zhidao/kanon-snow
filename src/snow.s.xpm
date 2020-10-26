@@ -1,0 +1,31 @@
+/* XPM */
+static const char *snow_s[] = {
+/* columns rows colors chars-per-pixel */
+"13 11 14 1",
+"  c #c5e1f2",
+". c #cce4f4",
+"X c #d1e6f5",
+"o c #d4e8f6",
+"O c #daebf6",
+"+ c #dcecf8",
+"@ c #e0eef8",
+"# c #e4f0f9",
+"$ c #ebf4fa",
+"% c #f4f4f4",
+"& c #f0f7fb",
+"* c #f4f9fc",
+"A c #fefefe",
+"= c none",
+/* pixels */
+"====****=====",
+"===*#+OO#&%==",
+"==%+ .oo.O&*=",
+"==# o$*%@.+*=",
+"=*o #AAA*oX$=",
+"**O &AAAAO $*",
+"==+ #AAA&Xo**",
+"==$oX$**o +**",
+"=**#X.oX.+*==",
+"===*&###$%*==",
+"====*=**====="
+};
