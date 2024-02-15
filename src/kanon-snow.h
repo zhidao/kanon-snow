@@ -2,7 +2,7 @@
 // by Zhidao
 //
 // 2003.10.29. Created.
-// 2020. 9. 8. Last updated.
+// 2024. 2.16. Last updated.
 
 #ifndef __KANON_SNOW_H
 #define __KANON_SNOW_H
@@ -109,6 +109,7 @@ class ksCanvasControl{
   void draw_msg_normal(ksMessageCell **mp);
   void draw_msg_last(ksMessageCell **mp);
 
+  void check_bom(ifstream &stream);
   void read_msg();
   void draw_msg();
 

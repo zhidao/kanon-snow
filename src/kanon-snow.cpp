@@ -2,7 +2,7 @@
 // by Zhidao
 //
 // 2003.10.29. Created.
-// 2020.10.26. Last updated.
+// 2024. 2.16. Last updated.
 
 #include <unistd.h>
 #include "kanon-snow.h"
@@ -163,6 +163,17 @@ void ksCanvasControl::update_snow(zxsPattern *pat, ksSnow *sp)
 
 // message
 
+// skip Byte Order Marker
+void ksCanvasControl::check_bom(ifstream &stream)
+{
+  char bom[3];
+
+  stream.read( bom, 3 );
+  if( ( 0xff & bom[0] ) != 0xef ||
+      ( 0xff & bom[1] ) != 0xbb ||
+      ( 0xff & bom[2] ) != 0xbf ) stream.seekg( 0 ); // rewind if BOM is not found.
+}
+
 void ksCanvasControl::read_msg()
 {
   char buf[BUFSIZ];
@@ -183,6 +194,7 @@ void ksCanvasControl::read_msg()
       exit( 1 );
     }
   }
+  check_bom( stream );
   while( !stream.eof() ){
     stream.getline( buf, BUFSIZ );
     int len = strlen( buf );
